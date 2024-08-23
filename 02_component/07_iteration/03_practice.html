@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,26 +10,21 @@
     <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <style>
-
         .checkedHandler {
 
             text-decoration: line-through;
         }
-        
-
-
-
-
     </style>
 
 </head>
+
 <body>
-    <div id = "root"></div>
+    <div id="root"></div>
 
 
-    <script type = "text/babel">
+    <script type="text/babel">
 
-        const {useState} = React;
+        const { useState } = React;
 
 
 
@@ -56,23 +52,11 @@
 
 
 
-
-
-
-            
-            
-            const [todo, setTodo] = useState ([
-                {id: 1, name: '할일 목록을 추가할 것'},
-
-
-
+            const [todo, setTodo] = useState([
+                { id: 1, name: '할일 목록을 추가할 것' },
             ])
-
             const [inputText, setInputText] = useState('');
             const [nextId, setNextId] = useState(2);
-
-            
-
             const onChangeHandler = e => setInputText(e.target.value);
 
             const onClickHandler = () => {
@@ -82,7 +66,7 @@
                 });
 
                 console.log(todoCopy);
-                
+
                 setNextId(nextId + 1);
                 setTodo(todoCopy);
                 setInputText('');
@@ -96,35 +80,21 @@
 
             }
 
-            const todoList = todo.map(name => <li key={name.id}
+             const todoList =todo.map(name => <li key={name.id}
                button onClick ={() => onRemove(name.id)}><input type="checkbox" onChange={(e) => checkedHandler(e)}/> 
                 {name.name}</li>);
-
-            function checkedHandler(e) {
-
-                return(
-                    {todo}
-                    
-
-
-                )
-
-
-
-            }
 
             return (
                 <div>
 
-                    
 
-                <input value={inputText} onChange={onChangeHandler}/>
-                <input type="checkbox" onChange={(e) => checkedHandler(e)}></input>
-                <button onClick={onClickHandler}>추가</button>
-                            
-                {todoList}
 
-                
+                    <input value={inputText} onChange={onChangeHandler} />
+                    <button onClick={onClickHandler}>추가</button>
+
+                    {todoList}
+
+
 
                 </div>
 
@@ -139,9 +109,9 @@
         function TodoList() {
             return (
                 <div>
-                    <Header/>
-                    <Content/>
-                    <Footer/>
+                    <Header />
+                    <Content />
+                    <Footer />
 
                 </div>
             )
@@ -150,10 +120,11 @@
 
         }
 
-        
 
 
-        ReactDOM.createRoot(document.getElementById('root')).render(<TodoList/>);
+
+        ReactDOM.createRoot(document.getElementById('root')).render(<TodoList />);
     </script>
 </body>
+
 </html>
