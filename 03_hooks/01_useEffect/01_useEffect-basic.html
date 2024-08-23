@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id = "root"></div>
+
+
+
+
+    <script type = "text/babel">
+        const {useEffect} = React;
+        // 매개변수 위치에서 구조분해할당
+        function MessagePrinter({message}) {
+            // console.log(React);
+            // 구조분해할당
+            // const{message} = props;
+            console.log(message);
+            
+            console.log('렌더링');
+
+            useEffect(() =>{
+                console.log('렌더링 이후 동작');
+                console.log(message);
+                
+                
+            })
+            
+            
+            return (
+                <h1>{console.log('렌더링 시 출력')}잘나오나요;
+                </h1>
+            )
+            // // 이 위치에서 (마운트 or 업데이트 이후에) 무언가 동작하게 하고 싶지만
+            // // 동작하지 않는다
+            // console.log('렌더링 이후 동작');
+            
+        }
+
+        const message = '안녕하세요';
+        ReactDOM.createRoot(document.getElementById('root')).render(<MessagePrinter/>);
+    </script>
+</body>
+</html>
