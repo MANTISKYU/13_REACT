@@ -10,7 +10,7 @@
     <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <style>
-        .checkedHandler {
+        .onCheckedHandler {
 
             text-decoration: line-through;
         }
@@ -80,9 +80,27 @@
 
             }
 
-            const todoList = todo.map(name => <li key={name.id}
-                onDoubleClick={() => onRemove(name.id)}>
-                {name.name}</li>);
+            const onCheckedHandler = (e) => {
+
+                return todo;
+
+
+
+
+            }
+
+            const todoList = todo.map(name =>
+                <li key={name.id}
+                    onDoubleClick={() => onRemove(name.id)}>
+                    <input 
+                                        type="checkbox" 
+                                        id={ name.id } 
+                                        onChange={ onCheckedHandler }
+                                        style={{textDecoration :'line-through'}}
+                                    />
+                    <button onClick = {() =>onRemove(name.id)}>삭제버튼</button>
+                    {name.name}
+                    </li>);
 
             return (
                 <div>
