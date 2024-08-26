@@ -14,6 +14,10 @@
 
             text-decoration: line-through;
         }
+
+    
+
+        
     </style>
 
 </head>
@@ -31,6 +35,11 @@
 
         function Header() {
 
+            // <button onClick="location.href='https://www.youtube.com/shorts/LZWcBwz_cbI?feature=share'" style="text-decoration-style:dashed"> 사마규 운동튜브 버튼</button>
+
+            <a href="https://www.youtube.com/shorts/LZWcBwz_cbI?feature=share">사마규 운동튜브 이동 버튼</a>
+            // target="_blank" style="text-decoration-style: dashed;"
+
             return (
                 '오늘의 할일! 2024. 8.21.'
             )
@@ -43,6 +52,7 @@
 
             return (
                 'Copyright 2022. team-greedy all rights reserved'
+                
             )
 
         }
@@ -111,6 +121,7 @@
                     <button onClick={onClickHandler}>추가</button>
 
                     {todoList}
+                    
 
 
 
