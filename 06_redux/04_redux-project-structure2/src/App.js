@@ -20,7 +20,7 @@ import "./App.css";
  * 
  * 주의사항
  * redux-devtools-extension 사용하려면
- * redux -> 4.2.0 버전으로 다운그레이드가 필요함
+ * redux -> 4.2.0 버전으로 다운그레이드가 필요함 ㅇㅇ
  * 이때, redux 호환문제로 인해
  * react-redux -> 8.0.2 버전
  * redux-thunk -> 2.4.1 버전으로 바꿔줘야한다.

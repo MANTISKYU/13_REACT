@@ -7,6 +7,7 @@ import App from './App';
  * redux-actions
  * redux-thunk
  * redux-logger
+ * 으하하
 
  * redux-devtools-extension
  */
